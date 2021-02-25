@@ -9,7 +9,7 @@ interface Props {
 const Meta = ({ title, keywords, description }: Props) => {
   return (
     <Head>
-      <meta http-equiv="Content-Type" content="text/html" />
+      <meta httpEquiv="Content-Type" content="text/html" />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1"
