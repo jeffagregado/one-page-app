@@ -1,20 +1,15 @@
+@import '~tailwindcss/components';
+
 .nav {
-  height: 50px;
-  padding: 10px;
-  background: #000;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
+  @apply bg-nav-bg text-white flex justify-center;
 
-.nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-}
+  ul {
+    @apply flex items-center list-none py-2;
 
-.nav ul li a {
-  margin: 5px 15px;
+    li {
+      @apply my-1 mx-4 border-white border-solid border-2 px-6 py-4 text-lg hover:bg-gray-600;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+  }
 }
