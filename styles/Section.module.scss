@@ -1,0 +1,17 @@
+.sectionOne {
+  @apply container flex flex-col justify-center items-center text-white overflow-hidden;
+
+  padding: 17rem 0;
+
+  @screen sm {
+    padding: 20rem 0;
+  }
+
+  h1 {
+    @apply text-7xl mb-3;
+    text-shadow: 2px 2px #000;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+}

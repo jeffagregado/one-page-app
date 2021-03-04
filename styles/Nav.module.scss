@@ -1,15 +1,90 @@
-@import '~tailwindcss/components';
-
 .nav {
-  @apply bg-nav-bg text-white flex justify-center;
+  @apply bg-nav-bg text-white;
 
-  ul {
-    @apply flex items-center list-none py-2;
+  min-height: 4rem;
 
-    li {
-      @apply my-1 mx-4 border-white border-solid border-2 px-6 py-4 text-lg hover:bg-gray-600;
-      transition: all 0.3s ease;
-      font-weight: 600;
+  &.nav-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+
+  /* nav button */
+  .nav-toggle {
+    @apply bg-nav-bg;
+
+    padding: 9px 10px;
+    margin: 8px 15px;
+    border: 1px solid transparent;
+
+    .nav-icon {
+      background-color: white;
+      display: block;
+      width: 22px;
+      height: 1px;
+      border-radius: 1px;
+      margin: 5px 0;
+    }
+
+    @screen sm {
+      display: none;
+    }
+  }
+
+  .nav-list {
+    @apply flex flex-col justify-center items-center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      li {
+        margin: 1rem 0;
+      }
+    }
+    @media (max-width: 640px) {
+      transition: max-height 0.3s ease;
+    }
+
+    &.collapse {
+      @media (max-width: 640px) {
+        max-height: 0;
+        overflow: hidden;
+      }
+    }
+
+    &.collapse-active {
+      @media (max-width: 640px) {
+        max-height: 280px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  @screen sm {
+    @apply flex justify-center overflow-hidden;
+
+    .nav-list {
+      @apply flex flex-row justify-center;
+
+      ul {
+        @apply flex flex-row items-center list-none;
+
+        li a {
+          @apply my-1 mx-4 block border-white border-solid border-2 text-lg hover:bg-gray-600;
+          padding: 15px 25px;
+          transition: all 0.3s ease;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .active {
+      li {
+        @apply bg-gray-600;
+      }
     }
   }
 }
