@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import navStyles from '../styles/Nav.module.scss'
+import NavBurger from './NavBurger'
 
 const Nav = () => {
   const scrollTo = (ele: any) => {
@@ -13,49 +14,51 @@ const Nav = () => {
   const [isNavCollapsed, setNavCollapsed] = useState(false)
   const handleNavCollapsed = () => setNavCollapsed(!isNavCollapsed)
 
+  const navItems = [
+    {
+      id: 0,
+      name: 'Homepage',
+      link: '/',
+    },
+    {
+      id: 1,
+      name: 'About Us',
+      link: '/about',
+    },
+    {
+      id: 2,
+      name: 'Services',
+      link: '/services',
+    },
+    {
+      id: 3,
+      name: 'Contact',
+      link: '/contact',
+    },
+    {
+      id: 4,
+      name: 'External',
+      link: '/external',
+    },
+  ]
+
   return (
     <>
       <nav className={`${navStyles.nav} ${navStyles['nav-fixed-top']}`}>
-        <button
-          type="button"
-          className={navStyles['nav-toggle']}
-          onClick={handleNavCollapsed}
-        >
-          <span className={navStyles['nav-icon']}></span>
-          <span className={navStyles['nav-icon']}></span>
-          <span className={navStyles['nav-icon']}></span>
-        </button>
+        <NavBurger onClick={handleNavCollapsed}></NavBurger>
         <div
           className={`${navStyles['nav-list']} ${
             isNavCollapsed ? navStyles['collapse-active'] : navStyles.collapse
           }`}
         >
           <ul>
-            <li>
-              <Link href="/">
-                <a>Hompage</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a>About Us</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a>Services</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a>Contact</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a>External</a>
-              </Link>
-            </li>
+            {navItems.map((navitem) => (
+              <li key={navitem.id}>
+                <Link href={navitem.link}>
+                  <a>{navitem.name}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
