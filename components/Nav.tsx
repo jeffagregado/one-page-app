@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Link as Linkscroll } from 'react-scroll'
 import { useState } from 'react'
 import navStyles from '../styles/Nav.module.scss'
 import NavBurger from './NavBurger'
@@ -16,29 +17,29 @@ const Nav = () => {
 
   const navItems = [
     {
-      id: 0,
+      id: 'home',
       name: 'Homepage',
       link: '/',
     },
     {
-      id: 1,
+      id: 'about',
       name: 'About Us',
-      link: '/about',
+      link: '#',
     },
     {
-      id: 2,
+      id: 'services',
       name: 'Services',
-      link: '/services',
+      link: '#',
     },
     {
-      id: 3,
+      id: 'contact',
       name: 'Contact',
-      link: '/contact',
+      link: '#',
     },
     {
-      id: 4,
+      id: 'external',
       name: 'External',
-      link: '/external',
+      link: '#',
     },
   ]
 
@@ -55,7 +56,15 @@ const Nav = () => {
             {navItems.map((navitem) => (
               <li key={navitem.id}>
                 <Link href={navitem.link}>
-                  <a>{navitem.name}</a>
+                  <Linkscroll
+                    activeClass={navStyles['scroll-active']}
+                    to={navitem.id}
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                  >
+                    {navitem.name}
+                  </Linkscroll>
                 </Link>
               </li>
             ))}

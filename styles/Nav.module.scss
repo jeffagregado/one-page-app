@@ -77,6 +77,11 @@
           padding: 15px 25px;
           transition: all 0.3s ease;
           font-weight: 600;
+          cursor: pointer;
+
+          &.scroll-active {
+            @apply bg-gray-600;
+          }
         }
       }
     }

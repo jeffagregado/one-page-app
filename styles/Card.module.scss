@@ -1,11 +1,26 @@
 @import './Utilities/variables';
 
 .card {
-  width: 30rem;
+  width: 100%;
   display: block;
   background-color: $card-color;
   margin-bottom: 1.5rem;
 
+  @screen md {
+    width: 30rem;
+  }
+
+  &.card-big {
+    width: 100%;
+
+    @screen md {
+      width: 48%;
+    }
+
+    .card-img {
+      height: 15rem;
+    }
+  }
 
   .card-img {
     width: 100%;
@@ -15,7 +30,7 @@
     img {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
     }
   }
 

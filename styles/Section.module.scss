@@ -22,16 +22,42 @@
   display: flex;
   flex-direction: column;
   padding: 2rem 0;
+  margin: 2rem auto;
+  overflow: hidden;
 
   .sectionAbout-top {
     width: 100%;
+    margin-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 
     h1 {
       font-size: 1.3rem;
       font-weight: 700;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .sectionAbout-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @screen md {
+      flex-direction: row;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #666666;
+    }
+
+    p {
       margin-bottom: 1rem;
     }
   }
