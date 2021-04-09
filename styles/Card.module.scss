@@ -1,0 +1,25 @@
+@import './Utilities/variables';
+
+.card {
+  width: 30rem;
+  display: block;
+  background-color: $card-color;
+  margin-bottom: 1.5rem;
+
+
+  .card-img {
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .card-info {
+    padding: 1.3rem;
+  }
+}
