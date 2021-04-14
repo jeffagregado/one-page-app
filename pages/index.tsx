@@ -1,4 +1,6 @@
+import Button from '../components/Button'
 import Card from '../components/Card'
+import Parallax from '../components/Parallax'
 import parallaxStyle from '../styles/Parallax.module.scss'
 import sectionStyle from '../styles/Section.module.scss'
 
@@ -23,6 +25,9 @@ export default function Home() {
               Blanditiis, voluptas. Rerum tempora perferendis atque explicabo
               pariatur molestias ipsam porro veniam!
             </p>
+            <div style={{ textAlign: 'center', margin: '2rem 0 1rem' }}>
+              <Button green>Button Green</Button>
+            </div>
           </Card>
           <Card img="/img/1-2.jpg">
             <h1>
@@ -33,6 +38,9 @@ export default function Home() {
               Blanditiis, voluptas. Rerum tempora perferendis atque explicabo
               pariatur molestias ipsam porro veniam!
             </p>
+            <div style={{ textAlign: 'center', margin: '2rem 0 1rem' }}>
+              <Button blue>Button Blue</Button>
+            </div>
           </Card>
           <Card img="/img/1-3.jpg">
             <h1>
@@ -43,6 +51,9 @@ export default function Home() {
               Blanditiis, voluptas. Rerum tempora perferendis atque explicabo
               pariatur molestias ipsam porro veniam!
             </p>
+            <div style={{ textAlign: 'center', margin: '2rem 0 1rem' }}>
+              <Button red>Button Red</Button>
+            </div>
           </Card>
         </div>
         <div className={sectionStyle['sectionAbout-bottom']}>
@@ -76,7 +87,96 @@ export default function Home() {
               dignissimos doloremque at earum illo commodi placeat magnam sint
               ut cupiditate esse.
             </p>
+            <div style={{ textAlign: 'right', margin: '1rem 5rem 1rem 0' }}>
+              <Button>Read More</Button>
+            </div>
           </Card>
+        </div>
+      </section>
+
+      <section id="services" className={sectionStyle.sectionServices}>
+        <Parallax bg2>
+          <div className={sectionStyle['services-banner']}>
+            <h1>Our Services</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur, illum neque. Sunt dolore veritatis ex minus quam
+              ipsam voluptate fuga?
+            </p>
+          </div>
+        </Parallax>
+        <div className={sectionStyle['services-content']}>
+          <div className={sectionStyle['services-content-top']}>
+            <Card img="/img/4-1.jpg" small>
+              <h1>Column One</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+                harum natus. Dolorem, deleniti, porro possimus maxime eius
+                exercitationem aperiam voluptatibus voluptatem, libero provident
+                in? Magni.
+              </p>
+            </Card>
+            <Card img="/img/4-2.jpg" small>
+              <h1>Column Two</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+                harum natus. Dolorem, deleniti, porro possimus maxime eius
+                exercitationem aperiam voluptatibus voluptatem, libero provident
+                in? Magni.
+              </p>
+              <div style={{ textAlign: 'center' }}>
+                <Button>Read It</Button>
+              </div>
+            </Card>
+            <Card img="/img/4-3.jpg" small>
+              <h1>Column Three</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+                harum natus. Dolorem, deleniti, porro possimus maxime eius
+                exercitationem aperiam voluptatibus voluptatem, libero provident
+                in? Magni.
+              </p>
+            </Card>
+            <Card img="/img/4-4.jpg" small>
+              <h1>Column Four</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+                harum natus. Dolorem, deleniti, porro possimus maxime eius
+                exercitationem aperiam voluptatibus voluptatem, libero provident
+                in? Magni.
+              </p>
+              <div style={{ textAlign: 'center' }}>
+                <Button>Details</Button>
+              </div>
+            </Card>
+          </div>
+          <div className={sectionStyle['services-content-bottom']}>
+            <Card img="/img/4-5.jpg" xl>
+              <h1>One Big Column</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                tempor eros eget eros maximus, ut cursus sem euismod. Donec
+                iaculis tristique odio at consectetur. Nullam dignissim varius
+                suscipit. Sed in leo sit amet velit finibus pretium. Vivamus
+                dictum nisi ac fermentum interdum. Vestibulum vel mauris at erat
+                mattis accumsan et ac lorem. Cras non venenatis orci, sed
+                tincidunt massa. Duis nisl lectus, auctor eu sodales at,
+                dignissim eu orci. Sed vitae venenatis magna, in blandit metus.
+                Praesent volutpat cursus rhoncus. Aenean arcu diam, suscipit ac
+                neque in, sollicitudin convallis orci.
+              </p>
+              <p>
+                Fusce eu porta massa, sed tincidunt turpis. Cum sociis natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus. Vivamus a urna tellus. Integer pharetra vitae nisi et
+                lacinia. Morbi sagittis justo a velit placerat ullamcorper quis
+                quis velit. Sed convallis at risus ullamcorper auctor. Praesent
+                quis velit neque. Quisque semper porta nisi vitae suscipit. Duis
+                lectus magna, ornare ac scelerisque quis, maximus eget nisi.
+              </p>
+              <Button>Read More</Button>
+            </Card>
+          </div>
         </div>
       </section>
     </>

@@ -1,0 +1,30 @@
+.btn {
+  align-items: center;
+  color: #6B6B6B;
+  background-color: white;
+  font-size: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+
+  &.btn-green {
+    border-radius: 5px;
+    border: none;
+    background-color: #178a27;
+    color: white;
+  }
+
+  &.btn-red {
+    border-radius: 5px;
+    border: none;
+    background-color: #852406;
+    color: white;
+  }
+
+  &.btn-blue {
+    border-radius: 5px;
+    border: none;
+    background-color: #1686c1;
+    color: white;
+  }
+}

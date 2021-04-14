@@ -62,3 +62,69 @@
     }
   }
 }
+
+.sectionServices {
+  overflow: hidden;
+  margin: 2rem auto;
+
+  .services-banner {
+    @apply container flex flex-col justify-center items-center
+    text-white;
+
+    height: 30vh;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+
+    @screen lg {
+      padding: 0 25rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .services-content {
+    @apply container my-10;
+
+    width: 100%;
+
+    .services-content-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      h1 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #666666;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .services-content-bottom {
+      h1 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #666666;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
