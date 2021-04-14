@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <section id="home" className={parallaxStyle.parallax}>
         <div className={`${sectionStyle.sectionOne}`}>
-          <h1 className="">CONQUER</h1>
-          <h2 className="">Simple Bootstrap Template</h2>
+          <h1>CONQUER</h1>
+          <h2>Simple Bootstrap Template</h2>
         </div>
       </section>
 
@@ -178,6 +178,48 @@ export default function Home() {
             </Card>
           </div>
         </div>
+      </section>
+
+      <section id="contact" className={sectionStyle.sectionContact}>
+        <Parallax bg3>
+          <div className={sectionStyle['contact-content']}>
+            <h1>Contact Form</h1>
+
+            <div className={sectionStyle['contact-banner']}>
+              <p>
+                Nunc diam leo, fringilla vulputate elit lobortis, consectetur
+                vestibulum quam. Sed id felis ligula. In euismod libero at magna
+                dapibus, in rutrum velit lacinia. Etiam a mi quis arcu varius
+                condimentum.
+              </p>
+            </div>
+            <form className={sectionStyle['contact-form']}>
+              <div className={sectionStyle['contact-form-info']}>
+                <input type="text" id="name" name="name" placeholder="Name" />
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                />
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                />
+              </div>
+              <div className={sectionStyle['contact-form-msg']}>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Your message here..."
+                ></textarea>
+                <Button inverse>Send</Button>
+              </div>
+            </form>
+          </div>
+        </Parallax>
       </section>
     </>
   )

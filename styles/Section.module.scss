@@ -128,3 +128,90 @@
     }
   }
 }
+
+.sectionContact {
+  overflow: hidden;
+  margin: 2rem auto;
+
+  .contact-content {
+    @apply container flex flex-col justify-center text-white;
+
+    padding: 5rem 0;
+
+    @screen md {
+      padding: 5rem 23rem;
+    }
+
+    h1 {
+      @apply text-5xl mb-3;
+      text-shadow: 2px 2px #000;
+      text-align: center;
+    }
+
+    .contact-banner {
+      background-color: white;
+      opacity: 0.5;
+      padding: 1rem 2rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+
+      p {
+        color: black;
+        font-weight: 500;
+        text-align: center;
+      }
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+
+      @screen md {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .contact-form-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @screen md {
+          width: 48%;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.3rem 1rem;
+          color: black;
+          opacity: 0.5;
+          border-radius: 4px;
+          margin-bottom: 1rem;
+
+          ::placeholder {
+            color: black;
+            opacity: 1;
+          }
+        }
+      }
+
+      .contact-form-msg {
+        width: 100%;
+
+        @screen md {
+          width: 48%;
+        }
+
+        textarea {
+          width: 100%;
+          min-height: 10rem;
+          padding: 0 1rem;
+          color: black;
+          border-radius: 4px;
+          opacity: 0.5;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

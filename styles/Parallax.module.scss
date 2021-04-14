@@ -8,6 +8,11 @@
     margin-bottom: 5rem;
   }
 
+  &.bg3 {
+    background-image: url('../public/img/bg-3.jpg');
+    min-height: 30vh;
+  }
+
   /* Set a specific height */
 
   min-height: 80vh;
