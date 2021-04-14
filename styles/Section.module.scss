@@ -139,6 +139,10 @@
     padding: 5rem 0;
 
     @screen md {
+      padding: 5rem 10rem;
+    }
+
+    @screen xl {
       padding: 5rem 23rem;
     }
 
