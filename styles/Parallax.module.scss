@@ -15,7 +15,11 @@
 
   /* Set a specific height */
 
-  min-height: 80vh;
+  min-height: 50vh;
+
+  @screen xl {
+    min-height: 80vh;
+  }
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;

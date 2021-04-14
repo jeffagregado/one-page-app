@@ -7,7 +7,7 @@ module.exports = {
       center: true,
       padding: '1.5rem',
     },
-/*     colors: {
+    /*     colors: {
       primary: '#383E4C',
       secondary: '#F2F2F2',
     }, */
