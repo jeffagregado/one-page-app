@@ -5,6 +5,8 @@ import parallaxStyle from '../styles/Parallax.module.scss'
 import sectionStyle from '../styles/Section.module.scss'
 
 export default function Home() {
+  const prefix = '/one-page-app'
+
   return (
     <>
       <section id="home" className={parallaxStyle.parallax}>
@@ -16,7 +18,7 @@ export default function Home() {
 
       <section id="about" className={sectionStyle.sectionAbout}>
         <div className={sectionStyle['sectionAbout-top']}>
-          <Card img="/img/1-1.jpg">
+          <Card img={`${prefix}/img/1-1.jpg`}>
             <h1>
               <span style={{ color: '#178A27' }}>Bootstrap v3.3.6</span>
             </h1>
@@ -29,7 +31,7 @@ export default function Home() {
               <Button green>Button Green</Button>
             </div>
           </Card>
-          <Card img="/img/1-2.jpg">
+          <Card img={`${prefix}/img/1-2.jpg`}>
             <h1>
               <span style={{ color: '#1686C1' }}>Responsive design</span>
             </h1>
@@ -42,7 +44,7 @@ export default function Home() {
               <Button blue>Button Blue</Button>
             </div>
           </Card>
-          <Card img="/img/1-3.jpg">
+          <Card img={`${prefix}/img/1-3.jpg`}>
             <h1>
               <span style={{ color: '#666666' }}>Parallax Layout</span>
             </h1>
@@ -57,7 +59,7 @@ export default function Home() {
           </Card>
         </div>
         <div className={sectionStyle['sectionAbout-bottom']}>
-          <Card img="/img/2-1.jpg" big>
+          <Card img={`${prefix}/img/2-1.jpg`} big>
             <h1>Two Column Left Side</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
@@ -73,7 +75,7 @@ export default function Home() {
             </p>
           </Card>
 
-          <Card img="/img/2-2.jpg" big>
+          <Card img={`${prefix}/img/2-2.jpg`} big>
             <h1>Two Column Right Side</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
