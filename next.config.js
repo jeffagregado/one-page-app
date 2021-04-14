@@ -1,6 +1,5 @@
 const ghPages = process.env.DEPLOY_TARGET === 'gh-pages'
 
 module.export = {
-  basepath: '/one-page-app',
-  assetPrefix: ghPages ? '/jeffagregado.github.io/' : '', // customize this value
+  assetPrefix: ghPages ? 'https://jeffagregado.github.io/one-page-app/' : '', // customize this value
 }
